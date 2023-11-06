@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Upload</title>
+</head>
+<body>
+
+<h1>Upload Image to S3</h1>
+<!-- 이미지 업로드 폼 -->
+<form method="post" action="/api/images" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="file">Choose file to upload:</label>
+    <input type="file" id="file" name="file" required>
+    <button type="submit">Upload</button>
+</form>
+
+<h2>Image List</h2>
+<!-- S3에 저장된 이미지 리스트 -->
+<ul>
+<!--    <li th:each="image : ${images}">-->
+<!--        <span th:text="${image.title}"></span>: <img th:src="${image.imageUrl}" alt="Image" width="200">-->
+<!--    </li>-->
+</ul>
+<img src="https://www.cjolivenetworks.co.kr/images/company/location/img-location-02-pc@2x.png" alt="CJ OliveNetworks 위치 이미지" style="width: 50%; height: auto;">
+
+</body>
+</html>
